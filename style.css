@@ -1,0 +1,134 @@
+:root {
+  --main-color: #eaa023;
+  --dark: #0c1023;
+  --dark-light: #191f3a;
+  --white: #ffffff;
+  --white-light:#c8c8c8;
+  --shadow: 0 0 15px rgba(0,0,0,0.25);
+  --cursive-font: cursive;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: var(--white-light);
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+/*Header*/
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.header-padding{
+    padding: 12px 0;
+}
+.nav-toggler {
+  width: 44px;
+  height: 34px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-toggler.active {
+  position: absolute ;
+  z-index: 1;
+  right: 0;
+  transition: all 0.5s ease;
+  transform: translateX(-200px);
+}
+.nav-toggler.active span {
+  background-color: transparent;
+}
+.nav-toggler.active span::before {
+  transform: rotate(135deg);
+}
+.nav-toggler.active span::after {
+  transform: rotate(-135deg);
+}
+.nav-toggler span {
+  display: block;
+  height: 2px;
+  width: 30px;
+  background-color: var(--main-color);
+  position: relative;
+}
+.nav-toggler span::before {
+  display: block;
+  content:"";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translateY(-8px);
+  background-color: var(--main-color);
+  transition: all 0.3s ease;
+}
+.nav-toggler span::after {
+  display: block;
+  content:"";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translateY(8px);
+  background-color: var(--main-color);
+  transition: all 0.3s ease;
+}
+.nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background-color:var(--dark-light);
+  padding: 80px 30px 40px;
+  transition: 0.5s ease;
+  transform: translateX(100%);
+}
+.nav.open {
+  transform: translateX(0%);
+}
+.nav ul li a {
+  color: var(--white);
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  transition:  0.3s ease;
+}
+.nav ul li a:hover {
+  color: var(--main-color);
+}
+.nav ul li {
+  margin-bottom: 10px;
+}
+
+/*About*/
+/*Skills*/
+/*Experience*/
+/*Interests*/
+/*Footer*/
