@@ -295,5 +295,38 @@ ul{
 }
 
 /*Experience*/
+.experience {
+  background-color: var(--dark-light);
+}
+.experience-item {
+  width: calc(100%/3 - 30px);
+  margin: 0 15px 30px;
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+.experience-item:hover .experience-img img {
+  border-color: var(--main-color);
+}
+.experience-job {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 30px 0
+}
+.experience-item p {
+  margin: 15px 0;
+}
+
+.experience-job .experience-img img {
+  width: 100%;
+  max-width: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--dark) ;
+  box-shadow: var(--shadow);
+  transition: border-color 0.3s ease ;
+}
+
 /*Interests*/
 /*Footer*/
