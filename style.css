@@ -224,6 +224,76 @@ ul{
   animation: Quay 10s infinite;
 }
 /*Skills*/
+.skills-section {
+  background-color: var(--dark);
+}
+.skills-taps {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+}
+.skills-taps .skills-tap-item {
+  background: transparent;
+  border: none;
+  padding: 0px 15px ;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.skills-taps .skills-tap-item:hover {
+  color: var(--main-color);
+}
+.skills-taps .skills-tap-item.active {
+  color: var(--main-color);
+}
+.skills-item {
+  width: calc(100%/2);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+  align-items: center;
+  position: relative;
+}
+.skills-tap-content .skills-item:hover .skills-item-mark {
+  color: var(--white);
+}
+.skills-tap-content .skills-item:hover h3{
+  color: var(--main-color);
+}
+.skills-tap-content .skills-item::after {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  border: 1px dashed var(--dark-light);
+}
+.skills-item .skills-item-title {
+  display: flex;
+  align-items: center;
+}
+.skills-item .skills-item-title img {
+  max-width: 100x;
+  margin-right: 15px;
+}
+.skills-item .skills-item-title h3 {
+  font-size: 16px;
+  transition: all 0.5s ease;
+  text-transform: capitalize;
+}
+.skills-item .skills-item-mark {
+  font-size: 16px;
+  color: var(--main-color);
+  transition: all 0.5s ease;
+}
+.skills-tap-content {
+  display: none;
+}
+.skills-tap-content.active{
+  display: flex;
+}
+
 /*Experience*/
 /*Interests*/
 /*Footer*/

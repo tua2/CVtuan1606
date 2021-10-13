@@ -18,3 +18,15 @@ window.addEventListener("scroll",function(){
         document.querySelector(".header").classList.remove("sticky")
     }
 })
+const skillsTabs=document.querySelector(".skills-taps");
+skillsTabs.addEventListener("click",function(e){
+    if(e.target.classList.contains("skills-tap-item")&& !e.target.classList.contains("active")){
+        const target=e.target.getAttribute("data-target");
+        skillsTabs.querySelector(".active").classList.remove("active");
+        e.target.classList.add("active");
+        const skillsSection=document.querySelector(".skills-section");
+        skillsSection.querySelector(".skills-tap-content.active").classList.remove("active");
+        skillsSection.querySelector(target).classList.add("active");
+    }
+})
+
